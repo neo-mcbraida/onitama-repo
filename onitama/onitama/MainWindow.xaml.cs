@@ -28,6 +28,7 @@ namespace onitama
         public List<Card> crds = new List<Card>();
         public List<Button> crdplaceholer = new List<Button>();
         public List<List<Button>> placeholders = new List<List<Button>>();
+        public List<Button> possiblemoves = new List<Button>();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -38,7 +39,7 @@ namespace onitama
             placeholders.Add(new List<Button> { p16, p17, p18, p19, p20 });
             placeholders.Add(new List<Button> { p21, p22, p23, p24, p25 });
             Card.Gen(crdplaceholer, crds);
-            p19.Click += Button_Click;
+           // p19.Click += Button_Click;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

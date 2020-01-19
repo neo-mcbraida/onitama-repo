@@ -7,10 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.502,0.526" Margin="0,0,-24,-460">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="table top.jpg"/>
         </Grid.Background>
-        <Image Canvas.ZIndex="-3" HorizontalAlignment="Left" Height="240" Margin="281,326,0,0" VerticalAlignment="Top" Width="236" Source="board.jpg" RenderTransformOrigin="0.5,0.5"  >
+        <Image Canvas.ZIndex="-3" HorizontalAlignment="Left" Height="240" Margin="238,326,0,0" VerticalAlignment="Top" Width="236" Source="board.jpg" RenderTransformOrigin="0.5,0.5" Grid.Column="1"  >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +24,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button HorizontalAlignment="Left" Height="46" Margin="327,375,0,0" VerticalAlignment="Top" Width="47" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="46" Margin="284,375,0,0" VerticalAlignment="Top" Width="47" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,7 +37,7 @@
                 <ImageBrush ImageSource="bpawn.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="44" Margin="235,329,0,0" VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="44" Margin="192,329,0,0" VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -46,7 +50,7 @@
                 <ImageBrush ImageSource="bpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="44" Margin="324,517,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="44" Margin="281,517,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,7 +63,7 @@
                 <ImageBrush ImageSource="bpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="47" Margin="230,471,0,0" VerticalAlignment="Top" Width="49" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="47" Margin="187,471,0,0" VerticalAlignment="Top" Width="49" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -72,7 +76,7 @@
                 <ImageBrush ImageSource="bpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="43" Margin="422,470,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="43" Margin="379,470,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -85,7 +89,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="43" Margin="468,329,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.645,0.456">
+        <Button HorizontalAlignment="Left" Height="43" Margin="425,329,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.645,0.456" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -98,7 +102,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="44" Margin="374,376,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="44" Margin="331,376,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -111,7 +115,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="45" Margin="610,516,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="45" Margin="567,516,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -124,7 +128,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="50" Margin="279,423,0,0"  VerticalAlignment="Top" Width="51" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button HorizontalAlignment="Left" Height="50" Margin="236,423,0,0"  VerticalAlignment="Top" Width="51" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -137,7 +141,7 @@
                 <ImageBrush ImageSource="bking.png"/>
             </Button.Background>
         </Button>
-        <Button  HorizontalAlignment="Left" Height="47" Margin="468,421,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5">
+        <Button  HorizontalAlignment="Left" Height="47" Margin="425,421,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -150,7 +154,7 @@
                 <ImageBrush ImageSource="wking.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="p10" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="247,620,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p10" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="204,620,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -160,7 +164,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p9" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="337,571,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p9" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="294,571,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -170,7 +174,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p8" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="435,530,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p8" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="392,530,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -180,7 +184,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p7" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="528,486,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p7" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="485,486,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -190,7 +194,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p6" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="616,433,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p6" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="573,433,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -200,7 +204,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p1" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="288,709,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p1" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="245,709,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -210,7 +214,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p2" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="381,669,0,0" VerticalAlignment="Top" Width="28" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p2" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="338,669,0,0" VerticalAlignment="Top" Width="28" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -220,7 +224,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p3" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="480,622,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p3" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="437,622,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -230,7 +234,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p4" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="571,572,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p4" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="528,572,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -240,7 +244,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p5" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="662,528,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p5" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="619,528,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -250,7 +254,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Canvas.ZIndex="-1" x:Name="p11" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="196,524,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button Canvas.ZIndex="-1" x:Name="p11" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="153,524,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -260,7 +264,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p20" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="145,430,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p20" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="102,430,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -270,7 +274,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p21" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="102,341,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p21" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="59,341,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -280,7 +284,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p15" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="569,341,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p15" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="526,341,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -290,7 +294,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p14" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="481,385,0,0" VerticalAlignment="Top" Width="28" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p14" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="438,385,0,0" VerticalAlignment="Top" Width="28" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -300,7 +304,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p12" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="287,477,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.468,0.496">
+        <Button x:Name="p12" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="244,477,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.468,0.496" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -310,7 +314,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p13" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="385,436,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p13" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="342,436,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -320,7 +324,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p19" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="241,388,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p19" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="198,388,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -330,7 +334,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p18" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="340,342,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p18" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="297,342,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -340,7 +344,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p16" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="527,243,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p16" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="484,243,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -350,7 +354,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p22" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="196,292,0,0" VerticalAlignment="Top" Width="28" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p22" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="153,292,0,0" VerticalAlignment="Top" Width="28" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -360,7 +364,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p23" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="296,245,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p23" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="253,245,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -370,7 +374,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p25" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="475,146,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p25" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="432,146,0,0" VerticalAlignment="Top" Width="26" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -380,7 +384,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p24" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="384,199,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p24" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="341,199,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -390,7 +394,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="p18_Copy1" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="758,373,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="p18_Copy1" Canvas.ZIndex="-1" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="715,373,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -400,8 +404,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="GetCards" Canvas.ZIndex="-1" Content="Button" HorizontalAlignment="Left" Margin="70,152,0,0" VerticalAlignment="Top" Width="116" Height="41" Click="Button_Click" Background="#FF3C3C3C" Foreground="#FFD1D1D1"/>
-        <Button x:Name="crd2" Canvas.ZIndex="-1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="390,581,0,0" Height="112" Click="Button_Click_1">
+        <Button x:Name="GetCards" Canvas.ZIndex="-1" Content="Button" HorizontalAlignment="Left" Margin="27,152,0,0" VerticalAlignment="Top" Width="116" Height="41" Click="Button_Click" Background="#FF3C3C3C" Foreground="#FFD1D1D1" Grid.Column="1"/>
+        <Button x:Name="crd2" Canvas.ZIndex="-1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="347,581,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -409,7 +413,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="192,582,0,0" Height="112" Click="Button_Click_1">
+        <Button x:Name="crd1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="149,582,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -417,7 +421,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="195,189,0,0" Height="112" Click="Button_Click_1">
+        <Button x:Name="crd4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="152,189,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -425,7 +429,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="403,188,0,0" Height="112" Click="Button_Click_1">
+        <Button x:Name="crd5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="360,188,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -433,7 +437,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="587,395,0,0" Height="112" Click="Button_Click_1">
+        <Button x:Name="crd3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="544,395,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -441,7 +445,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button Canvas.ZIndex="-1"  x:Name="p17" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="338,482,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5">
+        <Button Canvas.ZIndex="-1"  x:Name="p17" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="295,482,0,0" VerticalAlignment="Top" Width="27" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

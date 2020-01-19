@@ -55,6 +55,10 @@ namespace onitama
                 cards.RemoveAt(index);
             }
         }
+        public void Getmoves(pawn pwn, List<List<Button>> placeholders)
+        {
+            pawn.Findindex(placeholders);
+        }
 
         // public List<Card> crds = new List<Card>()
         public static void createcrds(List<Card> crd)

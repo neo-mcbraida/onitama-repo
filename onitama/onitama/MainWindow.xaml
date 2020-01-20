@@ -14,7 +14,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="table top.jpg"/>
         </Grid.Background>
-        <Image Canvas.ZIndex="-3" HorizontalAlignment="Left" Height="240" Margin="238,326,0,0" VerticalAlignment="Top" Width="236" Source="board.jpg" RenderTransformOrigin="0.5,0.5" Grid.Column="1"  >
+        <Image Canvas.ZIndex="0" HorizontalAlignment="Left" Height="240" Margin="238,326,0,0" VerticalAlignment="Top" Width="236" Source="board.jpg" RenderTransformOrigin="0.5,0.5" Grid.Column="1" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -24,7 +24,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button HorizontalAlignment="Left" Height="46" Margin="284,375,0,0" VerticalAlignment="Top" Width="47" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="b5" HorizontalAlignment="Left" Height="46" Margin="284,375,0,0" VerticalAlignment="Top" Width="47" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,7 +37,7 @@
                 <ImageBrush ImageSource="bpawn.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="44" Margin="192,329,0,0" VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="b4" HorizontalAlignment="Left" Height="44" Margin="192,329,0,0" VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,7 +50,7 @@
                 <ImageBrush ImageSource="bpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="44" Margin="281,517,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="b2" HorizontalAlignment="Left" Height="44" Margin="281,517,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -63,7 +63,7 @@
                 <ImageBrush ImageSource="bpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="47" Margin="187,471,0,0" VerticalAlignment="Top" Width="49" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="b1" HorizontalAlignment="Left" Height="47" Margin="187,471,0,0" VerticalAlignment="Top" Width="49" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -76,7 +76,7 @@
                 <ImageBrush ImageSource="bpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="43" Margin="379,470,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="w1" HorizontalAlignment="Left" Height="43" Margin="379,470,0,0"  VerticalAlignment="Top" Width="46" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -89,7 +89,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="43" Margin="425,329,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.645,0.456" Grid.Column="1">
+        <Button x:Name="w5" HorizontalAlignment="Left" Height="43" Margin="425,329,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.645,0.456" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -102,7 +102,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="44" Margin="331,376,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="w2" HorizontalAlignment="Left" Height="44" Margin="331,376,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -115,7 +115,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="45" Margin="567,516,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="w4" HorizontalAlignment="Left" Height="45" Margin="567,516,0,0"  VerticalAlignment="Top" Width="44" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -128,7 +128,7 @@
                 <ImageBrush ImageSource="wpawn.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Left" Height="50" Margin="236,423,0,0"  VerticalAlignment="Top" Width="51" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="b3" HorizontalAlignment="Left" Height="50" Margin="236,423,0,0"  VerticalAlignment="Top" Width="51" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -141,7 +141,7 @@
                 <ImageBrush ImageSource="bking.png"/>
             </Button.Background>
         </Button>
-        <Button  HorizontalAlignment="Left" Height="47" Margin="425,421,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name="w3"  HorizontalAlignment="Left" Height="47" Margin="425,421,0,0"  VerticalAlignment="Top" Width="45" BorderBrush="#00707070" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Pawn_Click"> 
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -405,7 +405,7 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="GetCards" Canvas.ZIndex="-1" Content="Button" HorizontalAlignment="Left" Margin="27,152,0,0" VerticalAlignment="Top" Width="116" Height="41" Click="Button_Click" Background="#FF3C3C3C" Foreground="#FFD1D1D1" Grid.Column="1"/>
-        <Button x:Name="crd2" Canvas.ZIndex="-1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="347,581,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
+        <Button x:Name="crd2" Canvas.ZIndex="-1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="347,581,0,0" Height="112" Click="Card_Click" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -413,7 +413,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="149,582,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
+        <Button x:Name="crd1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="149,582,0,0" Height="112" Click="Card_Click" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -421,7 +421,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="152,189,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
+        <Button x:Name="crd4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="152,189,0,0" Height="112" Click="Card_Click" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>
@@ -429,7 +429,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="crd5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="360,188,0,0" Height="112" Click="Button_Click_1" Grid.Column="1">
+        <Button x:Name="crd5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="360,188,0,0" Height="112" Click="Card_Click" Grid.Column="1">
             <Button.Background>
                 <ImageBrush />
             </Button.Background>

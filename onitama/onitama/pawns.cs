@@ -11,26 +11,33 @@ namespace onitama
     public class pawn
     {
         public Button pos { get; set; }
+      //  public List<Button> positions { get; set; }
         public List<int> index { get; set; }
-        public int value { get; set; }
-        public int col { get; set; }
         public Button piece { get; set; }
+        public pawn(Button _pos, Button _piece, List<int> _index)
+        {
+            index = _index;
+            pos = _pos;
+            piece = _piece;
+        }
+        
 
-        public void Findindex(List<List<Button>> positions)
+        public static void Findindex(pawn pwn, List<List<Button>> positions)
         {
             int u = 0;
             for (int i = 0; u < 0; i++)
             {
                 for (int x = 0; u < 0 || x < 5; x++)
                 {
-                    if (pos == positions[i][x])
+                    if (pwn.pos == positions[i][x])
                     {
-                        index.AddRange(new List<int> { i, x });
+
+                      //  pwn.index.AddRange(new List<int> { i, x });
                     }
                 }
             }
         }
-        public void move(Card crd)
+        public static void move()
         {
 
             //if (crd.pos[crd.selected] == piece.Margin)

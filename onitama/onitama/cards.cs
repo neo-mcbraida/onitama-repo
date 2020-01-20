@@ -55,9 +55,26 @@ namespace onitama
                 cards.RemoveAt(index);
             }
         }
-        public void Getmoves(pawn pwn, List<List<Button>> placeholders)
+        public static void Getmoves(Card crd, pawn pwn, List<List<Button>> placeholders/*, RoutedEventHandler v*/)
         {
-            pawn.Findindex(placeholders);
+            //pawn.Findindex(pwn, placeholders);
+            //pwn.positions.Clear();
+            //foreach (List<int> c in crd.vector)
+            //{
+            //    int x = pwn.index[0];
+            //    int y = pwn.index[1];
+            //    int x2 = c[0];
+            //    int y2 = c[1];
+
+            //    try
+            //    {
+            //        pwn.positions.Add(placeholders[x + x2][y + y2]);
+            //        Canvas.SetZIndex(placeholders[x + x2][y + y2], 2);
+            //        //    placeholders[x + x2][y + y2].Click += v;
+            //        // placeholders[x + x2][y + y2].set
+            //    }
+            //    catch { }
+            //}
         }
 
         // public List<Card> crds = new List<Card>()

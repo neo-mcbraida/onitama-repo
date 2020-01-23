@@ -34,10 +34,12 @@ namespace onitama
             imgref = _imgref;
         }
 
+       
 
         public static void Gen(List<Button> crdplaceholer, List<Card> cards)
         {
             createcrds(cards);
+
             foreach (Button crd in crdplaceholer)
             {
                 var random = new Random();
@@ -53,6 +55,7 @@ namespace onitama
                  //   Width = 75
                 };
                 cards.RemoveAt(index);
+                crd.DataContext = cards[index];
             }
         }
         public static void Getmoves(Card crd, pawn pwn, List<List<Button>> placeholders/*, RoutedEventHandler v*/)
@@ -81,22 +84,22 @@ namespace onitama
         public static void createcrds(List<Card> crd)
         {
 
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, -1 }, new List<int>() { 1, 1 }, new List<int>() { 2, 0 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\bat.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -1 }, new List<int>() { 0, 1 }, new List<int>() { 1, 0 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\bear.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, -1 }, new List<int>() { 1, -1 }, new List<int>() { 2, 1 }, new List<int>() { -2, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\bison.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, 1 }, new List<int>() { 1, 0 }, new List<int>() { -1, 0 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\cow.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -2, 0 }, new List<int>() { 2, 0 }, new List<int>() { 0, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\crawler.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 0 }, new List<int>() { 1, 1 }, new List<int>() { 1, -1 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\duck.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, 2 }, new List<int>() { 0, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\eel.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, 1 }, new List<int>() { -1, -1 }, new List<int>() { 1, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\lemur.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 0 }, new List<int>() { 1, 0 }, new List<int>() { 1, 1 }, new List<int>() { -1, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\lion.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 0 }, new List<int>() { -1, 1 }, new List<int>() { 1, 0 }, new List<int>() { 1, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\mole.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, -1 }, new List<int>() { 1, 1 }, new List<int>() { 0, 2 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\bat.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 0 }, new List<int>() { 1, 0 }, new List<int>() { 0, 1 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\bear.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, -1 }, new List<int>() { -1, 1 }, new List<int>() { 1, 2 }, new List<int>() { -2, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\bison.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 1, 0 }, new List<int>() { 0, 1 }, new List<int>() { 0, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\cow.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -2 }, new List<int>() { 0, 2 }, new List<int>() { 1, 0 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\crawler.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -1 }, new List<int>() { 1, 1 }, new List<int>() { -1, 1 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\duck.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 2, 0 }, new List<int>() { -1, 0 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\eel.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 1, 0 }, new List<int>() { -1, -1 }, new List<int>() { -1, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\lemur.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -1 }, new List<int>() { 0, 1 }, new List<int>() { 1, 1 }, new List<int>() { -1, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\lion.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -1 }, new List<int>() { 1, -1 }, new List<int>() { 0, 1 }, new List<int>() { 1, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\mole.jpg"));
             crd.Add(new Card(new List<List<int>>() { new List<int>() { 1, 1 }, new List<int>() { -1, -1 }, new List<int>() { -1, 1 }, new List<int>() { 1, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\monkey.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 1 }, new List<int>() { 1, 1 }, new List<int>() { 0, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\penguin.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 1 }, new List<int>() { -1, -1 }, new List<int>() { 1, 0 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\pentapus.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, 0 }, new List<int>() { 0, 1 }, new List<int>() { 0, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\pine.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, -1 }, new List<int>() { -1, 0 }, new List<int>() { 1, 0 }, new List<int>() { 1, 1 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\shirshu.jpg"));
-            crd.Add(new Card(new List<List<int>>() { new List<int>() { -2, 0 }, new List<int>() { -1, 1 }, new List<int>() { 1, -1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\wasp.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 1, -1 }, new List<int>() { 1, 1 }, new List<int>() { -1, 0 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\penguin.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 1, -1 }, new List<int>() { -1, -1 }, new List<int>() { 0, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\pentapus.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -1 }, new List<int>() { 1, 0 }, new List<int>() { -1, 0 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\pine.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { -1, -1 }, new List<int>() { 0, -1 }, new List<int>() { 0, 1 }, new List<int>() { 1, 1 } }, 3, 1, 0, @"F:\schoolc#\onitama\onitama\assetts\shirshu.jpg"));
+            crd.Add(new Card(new List<List<int>>() { new List<int>() { 0, -2 }, new List<int>() { 1, -1 }, new List<int>() { -1, 1 } }, 3, 0, 0, @"F:\schoolc#\onitama\onitama\assetts\wasp.jpg"));
             
         }
     

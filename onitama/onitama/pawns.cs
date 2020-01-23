@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace onitama
@@ -13,14 +14,17 @@ namespace onitama
         public Button pos { get; set; }
       //  public List<Button> positions { get; set; }
         public List<int> index { get; set; }
-        public Button piece { get; set; }
-        public pawn(Button _pos, Button _piece, List<int> _index)
+        public string Imgref { get; set; }
+       // public Button piece { get; set; }
+        public pawn(Button _pos, List<int> _index, string _imgref)
         {
             index = _index;
             pos = _pos;
-            piece = _piece;
+            Imgref = _imgref;
+            //   piece = _piece;
         }
         
+       
 
         public static void Findindex(pawn pwn, List<List<Button>> positions)
         {
@@ -37,13 +41,18 @@ namespace onitama
                 }
             }
         }
-        public static void move()
+        public static void move(Button pselected, Button newpos)
         {
-
-            //if (crd.pos[crd.selected] == piece.Margin)
-            //{
-            //    piece.Margin = crd.pos[crd.selected];
-            //}
+            dynamic z = pselected.DataContext;
+            pawn r = z;
+            string img = r.Imgref;
+            newpos.DataContext = pselected.DataContext;
+            newpos.Content = new Image
+            {
+                Source = new BitmapImage(new Uri(img, UriKind.RelativeOrAbsolute))
+            };
+            pselected.DataContext = null;
+            pselected.Content = null;
         }
 
 

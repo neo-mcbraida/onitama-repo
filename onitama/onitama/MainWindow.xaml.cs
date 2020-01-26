@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static onitama.Selected;
+using static onitama.Card;
+using static onitama.pawn;
 
 namespace onitama
 {
@@ -24,7 +27,9 @@ namespace onitama
         {
             InitializeComponent();
         }
+        public Selected select = new Selected();
         public bool highlight;
+        public bool player1 = true;
         public Button pos;
         public Button selectedcard;
         public Button selectedpawn;
@@ -36,6 +41,7 @@ namespace onitama
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            select.possible = possiblemoves;
             crdplaceholer.Add(crd1); crdplaceholer.Add(crd2); crdplaceholer.Add(crd3); crdplaceholer.Add(crd4); crdplaceholer.Add(crd5);
             placeholders.Add(new List<Button> { p1, p2, p3, p4, p5 });
             placeholders.Add(new List<Button> { p6, p7, p8, p9, p10 });
@@ -43,20 +49,17 @@ namespace onitama
             placeholders.Add(new List<Button> { p16, p17, p18, p19, p20 });
             placeholders.Add(new List<Button> { p21, p22, p23, p24, p25 });
 
-            Card.Gen(crdplaceholer, crds);
             int u = 0;
+            Gen(crdplaceholer, crds);
             foreach(Button i in placeholders[0])
             {
                 if ( i == placeholders[0][2])
                 {
-                    i.DataContext = new pawn(i, new List<int>() { 0, u }, "wking.png");
-
+                    i.DataContext = new pawn(new List<int>() { 0, u }, "wking.png", "wk");
                 }
                 else
                 {
-                    
-                    i.DataContext = new pawn(i, new List<int>() { 0, u }, "wpawn.png");
-
+                    i.DataContext = new pawn(new List<int>() { 0, u }, "wpawn.png", "wp");
                 }
                 u++;
             }
@@ -65,24 +68,19 @@ namespace onitama
             {
                 if (i == placeholders[4][2])
                 {
-                    i.DataContext = new pawn(i, new List<int>() { 4, u }, "bking.png");
-
+                    i.DataContext = new pawn(new List<int>() { 4, u }, "bking.png", "bk");
                 }
                 else
                 {
-                    i.DataContext = new pawn(i, new List<int>() { 4, u }, "bpawn.png");
-
+                    i.DataContext = new pawn(new List<int>() { 4, u }, "bpawn.png", "bp");
                 }
                 u++;
-
             }
             foreach (Button i in placeholders[4])
             {
                 dynamic z = i.DataContext;
                 pawn r = z;
                 string img = r.Imgref;
-
-
                 i.Content = new Image
                 {
                     Source = new BitmapImage(new Uri(img, UriKind.RelativeOrAbsolute))
@@ -93,42 +91,62 @@ namespace onitama
                 dynamic z = i.DataContext;
                 pawn r = z;
                 string img = r.Imgref;
-
-
                 i.Content = new Image
                 {
                     Source = new BitmapImage(new Uri(img, UriKind.RelativeOrAbsolute))
                 };
             }
-            //   foreach()
-            // p19.Click += Button_Click;
         }
 
         private void card_click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
             selectedcard = b;
+            select.crd = (Card)b.DataContext;
             selectedcard.DataContext = b.DataContext;
-            if (highlight == false && selectedpawn != null)
+            if (highlight == false)
             {
-                Methods.highlight(selectedcard, selectedpawn, placeholders);
+                select.highlight(placeholders, player1);
             }
+            
         }
 
         private void pos_click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-            if (b != selectedpawn && highlight!=true && selectedcard != null)
+            pawn pwn = (pawn)b.DataContext;
+            if (player1 ==true) 
             {
+                if (highlight != true)
+                {
+                        select.pwn = pwn;
+                        selectedpawn = b;
+                        select.highlight(placeholders, player1);
+                        highlight = true;
+                }
+                else// if()
+                {
+                    select.move(b, selectedpawn);
+                    clearhighlight(placeholders);
+                    highlight = false;
+                    player1 = false;
+                } 
+            } else if (player1 == false)
+            {
+                if (highlight != true)
+                {
+                        select.highlight(placeholders, player1);
+                        highlight = true;
+                }
+                else //if()
+                {
+                    select.move(b, selectedpawn);
+                    clearhighlight(placeholders);
+                    highlight = false;
+                    player1 = true;
+                }
+            }
 
-                selectedpawn = b;
-                selectedpawn.DataContext = b.DataContext;
-                Methods.highlight(selectedcard, selectedpawn, placeholders);
-                highlight = true;
-            }
-            else
-            {
-            }
         }
 
         

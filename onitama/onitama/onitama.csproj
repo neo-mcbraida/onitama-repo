@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Methods.cs" />
     <Compile Include="pawns.cs" />
+    <Compile Include="pieces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

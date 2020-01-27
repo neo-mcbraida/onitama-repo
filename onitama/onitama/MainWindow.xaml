@@ -298,7 +298,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <Button Canvas.ZIndex="-1"  x:Name="p17" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="46" Margin="192,469,0,0" VerticalAlignment="Top" Width="45" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button Canvas.ZIndex="-1"  x:Name="p17" BorderBrush="#00550000" BorderThickness="1" HorizontalAlignment="Left" Height="46" Margin="192,469,0,0" VerticalAlignment="Top" Width="45" Background="#00BF2323" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="pos_click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

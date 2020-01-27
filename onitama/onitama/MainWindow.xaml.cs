@@ -104,10 +104,8 @@ namespace onitama
             selectedcard = b;
             select.crd = (Card)b.DataContext;
             selectedcard.DataContext = b.DataContext;
-            if (highlight == false)
-            {
-                select.highlight(placeholders, player1);
-            }
+            select.highlight(placeholders, player1);
+            
             
         }
 
@@ -115,9 +113,7 @@ namespace onitama
         {
             Button b = (Button)sender;
             pawn pwn = (pawn)b.DataContext;
-            if (player1 ==true) 
-            {
-                if (highlight != true)
+                if (highlight == false)
                 {
                         select.pwn = pwn;
                         selectedpawn = b;
@@ -131,22 +127,18 @@ namespace onitama
                     highlight = false;
                     player1 = false;
                 } 
-            } else if (player1 == false)
-            {
-                if (highlight != true)
-                {
-                        select.highlight(placeholders, player1);
-                        highlight = true;
-                }
-                else //if()
-                {
-                    select.move(b, selectedpawn);
-                    clearhighlight(placeholders);
-                    highlight = false;
-                    player1 = true;
-                }
-            }
-
+                //if (highlight != true)
+                //{
+                //        select.highlight(placeholders, player1);
+                //        highlight = true;
+                //}
+                //else //if()
+                //{
+                //    select.move(b, selectedpawn);
+                //    clearhighlight(placeholders);
+                //    highlight = false;
+                //    player1 = true;
+                //}
         }
 
         

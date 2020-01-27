@@ -47,6 +47,8 @@ namespace onitama
                     Source = new BitmapImage(new Uri(pwn.Imgref, UriKind.RelativeOrAbsolute))
                 };
                 possible.Clear();
+                pwn = null;
+                crd = null;
             }
         }
         public void highlight(List<List<Button>> pholders, bool p1)
@@ -67,7 +69,7 @@ namespace onitama
                     catch { }
                 }
             }
-            else
+            else if (p1 == false)
             {
                 foreach (List<int> v in crd.vector)
                 {
@@ -76,6 +78,7 @@ namespace onitama
                         int y = pwn.index[0] - v[0];
                         int x = pwn.index[1] - v[1];
                         pholders[y][x].Background = Brushes.DarkRed;
+                        possible.Add(pholders[y][x]);
                     }
                     catch { }
                 }

@@ -28,8 +28,6 @@ namespace onitama
             InitializeComponent();
         }
         public Selected select = new Selected();
-        public bool highlight;
-        public bool player1 = true;
         public Button pos;
         public Button selectedcard;
         public Button selectedpawn;
@@ -102,9 +100,12 @@ namespace onitama
         {
             Button b = (Button)sender;
             selectedcard = b;
-            select.crd = (Card)b.DataContext;
-            selectedcard.DataContext = b.DataContext;
-            select.highlight(placeholders, player1);
+            Card x = (Card)b.DataContext;
+            if (select.player1 == x.p1)
+            {
+                select.crd = (Card)b.DataContext;
+                select.highlight(placeholders);
+            }
             
             
         }
@@ -113,32 +114,34 @@ namespace onitama
         {
             Button b = (Button)sender;
             pawn pwn = (pawn)b.DataContext;
-                if (highlight == false)
+            if (select.player1 == true)
+            {
+                if (select.highlighted == false)
                 {
-                        select.pwn = pwn;
-                        selectedpawn = b;
-                        select.highlight(placeholders, player1);
-                        highlight = true;
+                    select.pwn = pwn;
+                    selectedpawn = b;
+                    select.highlight(placeholders);
+                   // highlight = true;
                 }
-                else// if()
+                else
                 {
                     select.move(b, selectedpawn);
                     clearhighlight(placeholders);
-                    highlight = false;
-                    player1 = false;
-                } 
-                //if (highlight != true)
-                //{
-                //        select.highlight(placeholders, player1);
-                //        highlight = true;
-                //}
-                //else //if()
-                //{
-                //    select.move(b, selectedpawn);
-                //    clearhighlight(placeholders);
-                //    highlight = false;
-                //    player1 = true;
-                //}
+                }
+            } else if(select.player1 == false)
+            {
+                if (select.highlighted == false)
+                {
+                    select.pwn = pwn;
+                    selectedpawn = b;
+                    select.highlight(placeholders);
+                }
+                else
+                {
+                    select.move(b, selectedpawn);
+                    clearhighlight(placeholders);
+                }
+            }
         }
 
         

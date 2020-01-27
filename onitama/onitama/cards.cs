@@ -19,7 +19,7 @@ namespace onitama
 
 
         public List<Card> cards = new List<Card>();
-
+        public bool? p1 = true; // question mark for nullable bool
         public List<List<int>> vector { get; set; }
         public int current { get; set; }
         public int col { get; set; }
@@ -37,6 +37,7 @@ namespace onitama
         public static void Gen(List<Button> crdplaceholer, List<Card> cards)
         {
             createcrds(cards);
+            int i = 0;
             foreach (Button crd in crdplaceholer)
             {
                 var random = new Random();
@@ -48,8 +49,11 @@ namespace onitama
                     HorizontalAlignment = HorizontalAlignment.Left,
                     Stretch = Stretch.Fill
                 };
+                if (i == 2) { cards[index].p1 = null; }
+                else if (i > 2) { cards[index].p1 = false; }
                 crd.DataContext = cards[index];
                 cards.RemoveAt(index);
+                i++;
             }
         }
         public static void Getmoves(Card crd, pawn pwn, List<List<Button>> placeholders/*, RoutedEventHandler v*/)

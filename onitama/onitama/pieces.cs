@@ -14,8 +14,10 @@ namespace onitama
         public List<Button> possible { get; set; }
         public pawn pwn { get; set; }
         public Card crd { get; set; }
+        public bool player1 = true;
+        public bool highlighted = false;
 
-       public static void clearhighlight(List<List<Button>> pholders)
+        public static void clearhighlight(List<List<Button>> pholders)
         {
             foreach (List<Button> i in pholders)
             {
@@ -25,16 +27,6 @@ namespace onitama
                 }
             }
         }
-
-        public void canmove()
-        {
-
-        }
-        public void canhighlight()
-        {
-
-        }
-
         public void move(Button newpos, Button oldpos)
         {
             if (possible.Contains(newpos))
@@ -49,13 +41,15 @@ namespace onitama
                 possible.Clear();
                 pwn = null;
                 crd = null;
+                player1 = !player1; // reverses bool(incase i forget syntax..)
+                highlighted = !highlighted; 
             }
         }
-        public void highlight(List<List<Button>> pholders, bool p1)
+        public void highlight(List<List<Button>> pholders)
         {
-            
+            clearhighlight(pholders);
             if (pwn != null && crd != null)
-            if (p1 == true)
+            if (player1 == true)
             {
                 foreach (List<int> v in crd.vector)
                 {
@@ -63,13 +57,17 @@ namespace onitama
                     {
                         int y = pwn.index[0] + v[0];
                         int x = pwn.index[1] + v[1];
-                        pholders[y][x].Background = Brushes.DarkRed;
-                        possible.Add(pholders[y][x]);
+                        if (pwn.pwntype == "wp" || pwn.pwntype == "wk" && pholders[y][x].DataContext == null)
+                        {
+                            pholders[y][x].Background = Brushes.DarkRed;
+                            possible.Add(pholders[y][x]);
+                        }
                     }
                     catch { }
                 }
+                highlighted = !highlighted;
             }
-            else if (p1 == false)
+            else if (player1 == false)
             {
                 foreach (List<int> v in crd.vector)
                 {
@@ -77,11 +75,15 @@ namespace onitama
                     {
                         int y = pwn.index[0] - v[0];
                         int x = pwn.index[1] - v[1];
-                        pholders[y][x].Background = Brushes.DarkRed;
-                        possible.Add(pholders[y][x]);
+                        if (pwn.pwntype == "bp" || pwn.pwntype == "bk" && pholders[y][x].DataContext == null)
+                        {
+                             pholders[y][x].Background = Brushes.DarkRed;
+                             possible.Add(pholders[y][x]); 
+                        }
                     }
                     catch { }
                 }
+                highlighted = !highlighted;
             }
         }
 
